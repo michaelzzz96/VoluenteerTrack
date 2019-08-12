@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //Layout = "MayLayout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1>Voluneteer Tracking</h1>
+    <p class="lead">A Management App Made and used by Students .</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Powered by ASP.Net</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Register </h2>
+        <p>
+            Create an Account
+        </p>
+        <p>@Html.ActionLink("Register", "Register", "Account", null, new {@class= "btn btn-default" }) </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Log in</h2>
+        <p>Log in .</p>
+        <p><p>@Html.ActionLink("Sign in", "Login", "Account", null, new { @class = "btn btn-default" }) </p></p>
+    </div>
+  
+</div>
+@section scripts{
+    <script>var testing = true;</script>
+    }
+@*
+    You are using @Request.Browser.Browser, and thats cool
+
+    @{var amounts = new List<Decimal> { 100, 25.50m, -40, 275.99m };
+
+    }
+
+    <ul>
+        @foreach(decimal amount in amounts)
+        {
+            <li>
+                @formatAmount(amount)
+            </li>
+            <text>plain text</text>
+            @:plain text
+        }
+    </ul>
+
+        @helper formatAmount(decimal amount) {
+
+            var color = "green";
+            if (amount < 0)
+    {
+        color = "red";
+    }
+        <span style="color:@color">@String.Format("{0:c}", amount)</span>
+
+
+    }
+*@
